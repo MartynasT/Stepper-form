@@ -1,0 +1,174 @@
+html *,
+body * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.form {
+    width: 50%;
+    margin: auto;
+    border: 2px solid rgb(1, 77, 190);
+    padding: 20px;
+}
+
+.step-indicator {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    margin: auto;
+}
+
+
+.step {
+    display: flex;
+    align-items: center;
+    /* cursor: pointer; */
+    /* min-width: 25%; */
+}
+
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid rgb(1, 77, 190);
+    margin-right: 20px;
+    font-weight: 500;
+
+}
+
+.step.active .step-number {
+    background-color: rgb(1, 77, 190);
+    color: #fff;
+}
+
+label {
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    border: 1px solid rgb(26, 26, 26);
+    background: none;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: 25px;
+}
+
+textarea {
+    width: 100%;
+}
+
+.next-step {
+    border: 1px solid rgb(0, 133, 66);
+    background-color: rgb(0, 133, 66);
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 25px;
+    text-transform: capitalize;
+}
+
+.next-step:hover {
+    background-color: rgb(3, 105, 54);
+}
+
+.previous-step {
+    /* border: 1px solid rgb(0, 133, 66); */
+    /* background-color: rgb(0, 133, 66); */
+    /* color: #fff; */
+    border: none;
+    background: none;
+    font-size: 16px;
+    padding: 8px 30px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 25px;
+    text-transform: capitalize;
+
+}
+
+
+.previous-step:hover {
+    background-color: rgb(224, 223, 223);
+}
+
+.err {
+    background-color: rgba(252, 32, 61, 0.507);
+}
+
+
+.step-one,
+.step-two,
+.step-three,
+.step-four {
+    display: flex;
+}
+
+label,
+input {
+    display: block;
+    width: 100%;
+}
+
+.step-indicator {
+    margin-bottom: 25px;
+}
+
+.step-inputs {
+    display: none;
+}
+
+.step-inputs.show {
+    display: block;
+}
+
+.first-step-inputs {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.buttons {
+    width: 100%;
+}
+
+.input-wrapper {
+    flex: 1;
+    display: block;
+}
+
+.after-submit {
+    text-align: center;
+    display: none;
+    color: rgb(3, 105, 54);
+}
+
+.after-submit.show {
+    display: block;
+}
+
+@media screen and (max-width: 1250px) {
+    .step-indicator {
+        flex-wrap: wrap;
+    }
+
+    .step {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .input-wrapper.name {
+        width: 100%;
+        flex: unset;
+    }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Stepping form</title>
+  </head>
+  <body>
+    <section>
+      <div class="form">
+        <div class="step-indicator">
+          <div class="step active" id="1" data-next="1">
+            <span class="step-number">1</span>
+            <p class="step-title">Name, Last name</p>
+          </div>
+          <div class="step" id="2" data-next="2">
+            <span class="step-number">2</span>
+            <p class="step-title">Email</p>
+          </div>
+          <div class="step" id="3" data-next="3">
+            <span class="step-number">3</span>
+            <p class="step-title">Comment</p>
+          </div>
+          <div class="step" id="4">
+            <span class="step-number">4</span>
+            <p class="step-title">Submit!</p>
+          </div>
+        </div>
+        <div class="step-inputs show" id="1">
+          <!-- name and surname -->
+          <div class="first-step-inputs">
+            <div class="input-wrapper name">
+              <label for="fname">first name</label>
+              <input type="text" id="fname" />
+            </div>
+            <div class="input-wrapper lname">
+              <label for="lname">last name</label>
+              <input type="text" id="lname" />
+            </div>
+            <div class="buttons">
+              <button data-next="2" data-current="1" class="next-step">
+                next
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="step-inputs" id="2">
+          <!-- email -->
+          <div class="second-step-inputs">
+            <div class="input-wrapper">
+              <label for="email">email</label>
+              <input type="email" id="email" />
+            </div>
+          </div>
+          <div class="buttons">
+            <button data-next="3" data-current="2" class="next-step">
+              next
+            </button>
+            <button data-previous="1" data-current="2" class="previous-step">
+              previous
+            </button>
+          </div>
+        </div>
+        <div class="step-inputs" id="3">
+          <!-- comment -->
+          <div class="third-step-inputs">
+            <div class="input-wrapper">
+              <label for="comment">comment (optional)</label>
+              <textarea name="" id="comment" rows="10"></textarea>
+            </div>
+          </div>
+          <div class="buttons">
+            <button data-next="4" data-current="3" class="next-step">
+              next
+            </button>
+            <button data-previous="2" data-current="3" class="previous-step">
+              previous
+            </button>
+          </div>
+        </div>
+        <div class="step-inputs" id="4">
+          <!-- submit -->
+          <div class="fourth-step-inputs">
+            <!-- <input type="submit"  value="submit" /> -->
+            <div class="buttons">
+              <button class="next-step" data-current="4">Submit</button>
+              <button data-previous="3" data-current="4" class="previous-step">
+                previous
+              </button>
+            </div>
+            <div class="after-submit" id="message">
+              Thank you for your submition
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
